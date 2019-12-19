@@ -19,4 +19,10 @@
     <ProjectReference Include="..\Sportif.Data\Sportif.Data.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Pages\Admin\" />
+    <Folder Include="Pages\User\" />
+  </ItemGroup>
+
 </Project>

@@ -11,6 +11,8 @@ namespace Sportif.Models
         public string Path { get; set; }
         public int SalonID { get; set; }
 
+        public bool OnSlider { get; set; }
+
         [ForeignKey("SalonID")]
         public virtual Salon salon { get; set; }
     }

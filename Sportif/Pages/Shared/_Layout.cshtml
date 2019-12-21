@@ -51,9 +51,18 @@
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav justify-content-end">
                             <li class="nav-item active"><a class="nav-link" asp-page="/Index">Anasayfa</a></li>
-                            <li class="nav-item"><a class="nav-link" asp-page="">Üyelik</a></li>
-                            <li class="nav-item"><a class="nav-link" asp-page="">Hakkımızda</a></li>
-                            <li class="nav-item"><a class="nav-link" asp-page="">İletişim</a></li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item"><a class="nav-link" asp-page="./_AdminLayout">Yonet</a></li>
+                            }
+                            else
+                            {
+                                <li class="nav-item"><a class="nav-link" asp-page="">Üyelik</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="">Hakkımızda</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="">İletişim</a></li>
+                            }
+
+
                             <li style="background-color:darkorange;border-radius:10px"><partial name="_LoginPartial" /></li>
                         </ul>
                     </div>

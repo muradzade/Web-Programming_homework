@@ -27,8 +27,7 @@ namespace Sportif.Data
             if (_db.Roles.Any(r => r.Name == "Admin")) return;
 
             _roleManager.CreateAsync(new IdentityRole("Admin")).GetAwaiter().GetResult();
-            _roleManager.CreateAsync(new IdentityRole("Musteri")).GetAwaiter().GetResult();
-
+            _roleManager.CreateAsync(new IdentityRole("User")).GetAwaiter().GetResult();
 
 
             _userManager.CreateAsync(new ApplicationUser

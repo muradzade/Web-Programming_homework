@@ -14,17 +14,16 @@ namespace Sportif.Data
         {
         }
 
-        public DbSet<Branch> Branch { get; set; }
-        public DbSet<ApplicationUser> ApplicationUser { get; set; }
-        public DbSet<Event> Event { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Event> Events { get; set; }
         public DbSet<News> News { get; set; }
-        public DbSet<Salon> Salon { get; set; }
-        public DbSet<SalonBranch> SalonBranch { get; set; }
-        public DbSet<SalonComment> SalonComment { get; set; }
+        public DbSet<Salon> Salons { get; set; }
+        public DbSet<SalonComment> SalonComments { get; set; }
         public DbSet<SalonImages> SalonImages { get; set; }
-        public DbSet<Trainer> Trainer { get; set; }
-        public DbSet<TrainerComment> TrainerComment { get; set; }
-
+        public DbSet<Trainer> Trainers { get; set; }
+        public DbSet<TrainerComment> TrainerComments { get; set; }
+        public DbSet<Facility> Facilities { get; set; }
+        public DbSet<SalonFacility> SalonFacilities { get; set; }
 
 
     }

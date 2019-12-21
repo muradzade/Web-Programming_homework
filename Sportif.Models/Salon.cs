@@ -12,7 +12,7 @@ namespace Sportif.Models
         public string Address { get; set; }
         public virtual ICollection<SalonImages> SalonImages { get; set; }
 
-        public virtual ICollection<SalonBranch> SalonBranches { get; set; }
+        public virtual ICollection<Facility> Facilities { get; set; }
         public virtual ICollection<SalonComment> SalonComments { get; set; }
     }
 }

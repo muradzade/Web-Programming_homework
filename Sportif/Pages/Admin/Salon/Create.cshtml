@@ -1,8 +1,9 @@
 ﻿@page
-@model Sportif.CreateModel
+@model Sportif.Pages.Admin.Salon.CreateModel
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_AdminLayout.cshtml";
 }
 
 <h1>Create</h1>
@@ -39,6 +40,10 @@
     <a asp-page="Index">Back to List</a>
 </div>
 
-@section Scripts {
+
+@*
+    @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+*@
+

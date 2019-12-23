@@ -11,10 +11,13 @@ namespace Sportif.Models
         public int ID { get; set; }
         public string Content { get; set; }
         public DateTime Date { get; set; }
-
         public int SalonID { get; set; }
         [ForeignKey("SalonID")]
         public virtual Salon Salon { get; set; }
+
+        public string ApplicationUserID { get; set; }
+        [ForeignKey("ApplicationUserID")]
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
     }
 }

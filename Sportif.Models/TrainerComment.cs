@@ -6,14 +6,17 @@ using System.Text;
 
 namespace Sportif.Models
 {
-    public class TrainerComment : IComment
+    public class TrainerComment:IComment
     {
         public int ID { get; set; }
         public string Content { get; set; }
         public DateTime Date { get; set; }
-
         public int TrainerID { get; set; }
         [ForeignKey("TrainerID")]
         public virtual Trainer Trainer { get; set; }
+
+        public string ApplicationUserID { get; set; }
+        [ForeignKey("ApplicationUserID")]
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Sportif.Data;
 using Sportif.Models;
 
-namespace Sportif
+namespace Sportif.Pages.Admin.Salon
 {
-    [Authorize(Roles ="Admin")]
     public class CreateModel : PageModel
     {
         private readonly Sportif.Data.ApplicationDbContext _context;
@@ -27,7 +25,7 @@ namespace Sportif
         }
 
         [BindProperty]
-        public Salon Salon { get; set; }
+        public Sportif.Models.Salon Salon { get; set; }
 
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.

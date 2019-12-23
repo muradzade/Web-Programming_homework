@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Sportif.Data;
 using Sportif.Models;
 
-namespace Sportif
+namespace Sportif.Pages.Admin.Salon
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace Sportif
         }
 
         [BindProperty]
-        public Salon Salon { get; set; }
+        public Sportif.Models.Salon Salon { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

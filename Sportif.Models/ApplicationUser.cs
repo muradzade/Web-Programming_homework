@@ -14,7 +14,6 @@ namespace Sportif.Models
         public string Phone { get; set; }
         public string Address { get; set; }
         public string ImagePath { get; set; }
-        public int BranchID { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
@@ -24,5 +23,8 @@ namespace Sportif.Models
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
 
+        public int SalonID { get; set; }
+        [ForeignKey("SalonID")]
+        public virtual Salon Salon { get; set; }
     }
 }

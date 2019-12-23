@@ -27,4 +27,12 @@
     <Folder Include="Pages\User\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Content Update="wwwroot\admin_panel\images\icon\logo-white.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

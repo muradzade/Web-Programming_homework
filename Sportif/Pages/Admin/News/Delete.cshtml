@@ -12,36 +12,49 @@
 <div>
     <h4>News</h4>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.News.Header)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.News.Header)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.News.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.News.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.News.Content)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.News.Content)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.News.ImagePath)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.News.ImagePath)
-        </dd>
-    </dl>
-    
-    <form method="post">
-        <input type="hidden" asp-for="News.ID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
-    </form>
+</div>
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-md-4">
+                    <div class="card">
+                        <div class="card-body card-block">
+                            <dl class="row">
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.News.Header)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.News.Header)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.News.Description)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.News.Description)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.News.Content)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.News.Content)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.News.ImagePath)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.News.ImagePath)
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form method="post">
+                <input type="hidden" asp-for="News.ID" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a asp-page="./Index">Back to List</a>
+            </form>
+        </div>
+    </div>
 </div>

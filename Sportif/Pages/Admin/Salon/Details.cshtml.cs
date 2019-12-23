@@ -34,6 +34,7 @@ namespace Sportif.Pages.Admin.Salon
             {
                 return NotFound();
             }
+
             return Page();
         }
     }

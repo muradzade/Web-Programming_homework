@@ -43,6 +43,7 @@ namespace Sportif.Pages.Admin.News
         // more details see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            News.Date = DateTime.Now;
             if (!ModelState.IsValid)
             {
                 return Page();

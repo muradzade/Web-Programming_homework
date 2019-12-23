@@ -31,9 +31,9 @@ namespace Sportif.Pages.Admin.Salon
         // more details see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+           // if (!ModelState.IsValid)
             {
-                return Page();
+        //        return Page();
             }
 
             _context.Salons.Add(Salon);

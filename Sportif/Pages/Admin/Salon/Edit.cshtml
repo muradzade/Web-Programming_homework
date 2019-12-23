@@ -14,6 +14,7 @@
 <div class="main-content">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
+            <h2>Salon Düzenle</h2>
             <div class="row">
                 <div class="col-lg-10 col-md-4">
                     <div class="card">
@@ -46,6 +47,15 @@
                                     <div class="col-12 col-md-9">
                                         <textarea asp-for="Salon.Address" rows="2" class="form-control"></textarea>
                                         <small class="form-text text-muted"><span asp-validation-for="Salon.Address" class="text-danger"></span></small>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label asp-for="Salon.Image" class="form-control-label">Adres</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <input asp-for="Salon.Image" type="file" class="form-control"></input>
+                                        <small class="form-text text-muted"><span asp-validation-for="Salon.Image" class="text-danger"></span></small>
                                     </div>
                                 </div>
                                 <div class="form-group">

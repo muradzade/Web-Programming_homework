@@ -6,46 +6,51 @@
     Layout = "~/Pages/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Edit</h1>
-
-<h4>Event</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Event.ID" />
-            <div class="form-group">
-                <label asp-for="Event.Header" class="control-label"></label>
-                <input asp-for="Event.Header" class="form-control" />
-                <span asp-validation-for="Event.Header" class="text-danger"></span>
+
+
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <h2>Etkinlik Düzenle</h2>
+            <div class="row">
+                <div class="col-lg-10 col-md-4">
+                    <div class="card">
+                        <div class="card-body card-block">
+                            <form method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="Event.ID" />
+                                <div class="form-group">
+                                    <label asp-for="Event.Header" class="control-label"></label>
+                                    <input asp-for="Event.Header" class="form-control" />
+                                    <span asp-validation-for="Event.Header" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Event.Description" class="control-label"></label>
+                                    <textarea asp-for="Event.Description" class="form-control" rows="3"></textarea>
+                                    <span asp-validation-for="Event.Description" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Event.Content" class="control-label"></label>
+                                    <textarea asp-for="Event.Content" class="form-control" rows="9"></textarea>
+                                    <span asp-validation-for="Event.Content" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Event.ImagePath" class="control-label"></label>
+                                    <input asp-for="Event.ImagePath" type="file" class="form-control" />
+                                    <span asp-validation-for="Event.ImagePath" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Event.Description" class="control-label"></label>
-                <input asp-for="Event.Description" class="form-control" />
-                <span asp-validation-for="Event.Description" class="text-danger"></span>
+            <div>
+                <a asp-page="./Index">Back to List</a>
             </div>
-            <div class="form-group">
-                <label asp-for="Event.Content" class="control-label"></label>
-                <input asp-for="Event.Content" class="form-control" />
-                <span asp-validation-for="Event.Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Event.ImagePath" class="control-label"></label>
-                <input asp-for="Event.ImagePath" class="form-control" />
-                <span asp-validation-for="Event.ImagePath" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
-
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

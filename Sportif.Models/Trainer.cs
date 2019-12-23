@@ -13,6 +13,7 @@ namespace Sportif.Models
         public string Surname { get; set; }
         public string Biography { get; set; }
         public string Contacts { get; set; }
+        public string Image { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]

@@ -13,6 +13,7 @@
 <div class="main-content">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
+            <h2>Salonlar</h2> <br />
             <a class="btn btn-primary" asp-page="./Create">Ekle</a>
             <div class="row">
                 <div class="col-12 col-md-12">
@@ -29,9 +30,6 @@
                                     <th>
                                         Adres
                                     </th>
-                                    <th>
-                                        Uye sayi
-                                    </th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -46,15 +44,12 @@
                                             <textarea readonly asp-for="@item.Description" rows="2">
                                                 @Html.DisplayFor(modelItem => item.Description)
                                             </textarea>
-                                            
+
                                         </td>
                                         <td>
-                                            <textarea readonly asp-for="@item.Description" rows="2">
+                                            <textarea readonly asp-for="@item.Address" rows="2">
                                                 @Html.DisplayFor(modelItem => item.Address)
                                             </textarea>
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.ApplicationUsers.Count)
                                         </td>
                                         <td>
                                             <a asp-page="./Edit" asp-route-id="@item.ID"><i class="fas fa-edit"></i> Edit</a> |

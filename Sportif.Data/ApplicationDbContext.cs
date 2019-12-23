@@ -19,7 +19,6 @@ namespace Sportif.Data
         public DbSet<News> News { get; set; }
         public DbSet<Salon> Salons { get; set; }
         public DbSet<SalonComment> SalonComments { get; set; }
-        public DbSet<SalonImages> SalonImages { get; set; }
         public DbSet<Trainer> Trainers { get; set; }
         public DbSet<TrainerComment> TrainerComments { get; set; }
         public DbSet<Facility> Facilities { get; set; }

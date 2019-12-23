@@ -6,50 +6,65 @@
     Layout = "~/Pages/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.News[0].Header)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.News[0].Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.News[0].Content)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.News[0].ImagePath)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.News) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Header)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Content)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImagePath)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <h2>Haberler</h2> <br />
+            <a class="btn btn-primary" asp-page="./Create">Ekle</a>
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="table-responsive table--no-card m-b-30">
+                        <table class="table table-borderless table-striped table-earning">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Başlık
+                                    </th>
+                                    <th>
+                                        Açıklama
+                                    </th>
+                                    <th>
+                                        İçerik
+                                    </th>
+                                    <th>
+                                        Tarih
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.News)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Header)
+                                        </td>
+                                        <td>
+                                            <textarea readonly rows="2">
+                                               @Html.DisplayFor(modelItem => item.Description)
+                                        </textarea>
+                                        </td>
+                                        <td>
+                                            <textarea readonly rows="2">
+                                                @Html.DisplayFor(modelItem => item.Content)
+                                        </textarea>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Date)
+                                        </td>
+                                        <td>
+                                            <a asp-page="./Edit" asp-route-id="@item.ID"><i class="fas fa-edit"></i> Edit</a> |
+                                            <a asp-page="./Details" asp-route-id="@item.ID"><i class="fas fa-list-ul"></i> Details</a> |
+                                            <a asp-page="./Delete" asp-route-id="@item.ID"><i class="fas fa-trash-alt"></i> Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

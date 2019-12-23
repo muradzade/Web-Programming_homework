@@ -22,7 +22,7 @@ namespace Sportif.Pages.Admin.Trainer
 
         [BindProperty]
         public Sportif.Models.Trainer Trainer { get; set; }
-
+        public List<Sportif.Models.Salon> Salons { get; set; }
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -37,7 +37,10 @@ namespace Sportif.Pages.Admin.Trainer
             {
                 return NotFound();
             }
-           ViewData["SalonID"] = new SelectList(_context.Salons, "ID", "ID");
+
+            Salons=_context.Salons.ToList();
+
+           ViewData["SalonHeader"] = new SelectList(_context.Salons, "Header", "Header");
             return Page();
         }
 

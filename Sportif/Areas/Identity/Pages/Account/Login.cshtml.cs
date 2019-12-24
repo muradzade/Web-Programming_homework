@@ -83,7 +83,7 @@ namespace Sportif.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return Redirect("/Admin/Salon");
+                    return Redirect("/Index");
                     //return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

@@ -15,7 +15,7 @@
                         @foreach (var item in Model.Salons)
                         {
                             <li>
-                                <a asp-page="/User/Salon/Index" asp-route-adres="@item.Address" class="d-flex justify-content-between">
+                                <a asp-page="/Salons" asp-route-adres="@item.Address" class="d-flex justify-content-between">
                                     <p>@item.Address</p>
                                 </a>
                             </li>

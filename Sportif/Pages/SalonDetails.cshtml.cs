@@ -18,11 +18,17 @@ namespace Sportif
 
         public Sportif.Models.Salon Salon { get; set; }
         public List<Sportif.Models.Trainer> Trainers { get; set; }
+        public List<Sportif.Models.SalonComment> Comments { get; set; }
 
         public void OnGet(int id)
         {
             Salon = _db.Salons.FirstOrDefault(s => s.ID == id);
             Trainers = _db.Trainers.Where(t => t.SalonID == id).ToList();
+            Comments = _db.SalonComments
+                .Where(c => c.SalonID == id)
+                .OrderByDescending(d => d.Date)
+                .Take(4)
+                .ToList();
         }
     }
 }

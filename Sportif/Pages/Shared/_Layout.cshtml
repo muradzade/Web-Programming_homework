@@ -43,13 +43,13 @@
                             <li class="nav-item active"><a class="nav-link" asp-page="/Index">Anasayfa</a></li>
                             @if (User.IsInRole("Admin"))
                             {
-                                <li class="nav-item"><a class="nav-link" asp-page="/Admin/Salon/Index">Yonet</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/Admin/Salon/Index">Yonet</a></li>
                             }
                             else
                             {
-                                <li class="nav-item"><a class="nav-link" asp-page="/Salons">Üyelik</a></li>
-                                <li class="nav-item"><a class="nav-link" asp-page="">Hakkımızda</a></li>
-                                <li class="nav-item"><a class="nav-link" asp-page="">İletişim</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/Salons">Üyelik</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/About">Hakkımızda</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-page="">İletişim</a></li>
                             }
 
 
@@ -70,10 +70,17 @@
         </div>
     </section>
 
+
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - Sportif - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
+        
+            <section class="header-top d-none d-sm-block">
+                <div class="container">
+                    <div class="d-sm-flex justify-content-between">
+                        &copy; 2019 - Sportif - <a asp-area="" asp-page="/Privacy">Privacy</a>
+                    </div>
+                </div>
+            </section>
+      
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

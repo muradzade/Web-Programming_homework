@@ -48,14 +48,23 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label asp-for="Salon.Image" class="form-control-label">Adres</label>
+                                        <label asp-for="Salon.Image" class="form-control-label">Resim</label>
                                     </div>
                                     <div class="col-12 col-md-9">
                                         <input type="file" class="form-control" />
                                         <small class="form-text text-muted"><span asp-validation-for="Salon.Image" class="text-danger"></span></small>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="row form-check">
+                                    <div class="col col-md-3">
+                                        <label asp-for="Salon.IsSlider" class="form-control-label">Slider ? </label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <input asp-for="Salon.IsSlider" type="checkbox" class="form-check-input" />
+                                        <small class="form-text text-muted"><span asp-validation-for="Salon.IsSlider" class="text-danger"></span></small>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
                                     <button type="submit" class="btn btn-primary btn-sm">
                                         <i class="fa fa-dot-circle-o"></i> Save
                                     </button>

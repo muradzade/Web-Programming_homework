@@ -20,9 +20,6 @@ namespace Sportif.Data
         public DbSet<Salon> Salons { get; set; }
         public DbSet<SalonComment> SalonComments { get; set; }
         public DbSet<Trainer> Trainers { get; set; }
-        public DbSet<TrainerComment> TrainerComments { get; set; }
-        public DbSet<Facility> Facilities { get; set; }
-        public DbSet<SalonFacility> SalonFacilities { get; set; }
 
 
     }

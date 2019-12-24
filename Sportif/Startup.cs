@@ -65,6 +65,8 @@ namespace Sportif
 
             app.UseEndpoints(endpoints =>
             {
+                
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
         }

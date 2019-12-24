@@ -1,0 +1,60 @@
+﻿@page
+@model Sportif.Pages.User.Salon.IndexModel
+
+
+@{
+    ViewData["Title"] = "Home page";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-md-3">
+                <aside class="single_sidebar_widget post_category_widget">
+                    <h4 class="widget_title">Şehirler</h4>
+                    <ul class="list cat-list">
+                        @foreach (var item in Model.Salons)
+                        {
+                            <li>
+                                <a asp-page="/User/Salon/Index" asp-route-adres="@item.Address" class="d-flex justify-content-between">
+                                    <p>@item.Address</p>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                    <div class="br"></div>
+                </aside>
+            </div>
+            <div class="col-9 col-md-9">
+                <section class="section-margin">
+                    <div class="container">
+                        <div class="section-intro text-center pb-65px">
+                            <h2 class="section-intro__title">Salonlar</h2>
+                        </div>
+                        <div class="row">
+                            @foreach (var item in Model.SalonFiltered)
+                            {
+                                <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+                                    <div class="card card-subject">
+                                        <div class="card-subject__img">
+                                            <img class="card-img rounded-0" src="img/@item.Image" alt="">
+                                        </div>
+                                        <div class="card-subject__body">
+                                            <h3><a asp-page="/User/Salon/Details" asp-route-id="@item.ID">@item.Header</a></h3>
+                                            <p>@item.Description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+</div>

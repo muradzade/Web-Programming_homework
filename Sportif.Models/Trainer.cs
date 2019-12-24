@@ -23,6 +23,5 @@ namespace Sportif.Models
         [ForeignKey("SalonID")]
         public virtual Salon Salon { get; set; }
 
-        public virtual ICollection<TrainerComment> TrainerComments { get; set; }
     }
 }

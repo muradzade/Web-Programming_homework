@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="vendors/Magnific-Popup/magnific-popup.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <!--================ Header Top Area Start =================-->
@@ -44,11 +43,11 @@
                             <li class="nav-item active"><a class="nav-link" asp-page="/Index">Anasayfa</a></li>
                             @if (User.IsInRole("Admin"))
                             {
-                                <li class="nav-item"><a class="nav-link" asp-page="/Admin/Home">Yonet</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="/Admin/Home/Index">Yonet</a></li>
                             }
                             else
                             {
-                                <li class="nav-item"><a class="nav-link" asp-page="">Üyelik</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="/User/Salon/Index">Üyelik</a></li>
                                 <li class="nav-item"><a class="nav-link" asp-page="">Hakkımızda</a></li>
                                 <li class="nav-item"><a class="nav-link" asp-page="">İletişim</a></li>
                             }
@@ -63,12 +62,13 @@
     </header>
     <!--================Header Menu Area =================-->
 
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <section>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </section>
 
     <footer class="border-top footer text-muted">
         <div class="container">

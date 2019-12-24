@@ -45,18 +45,19 @@
     <div class="page-wrapper">
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar2">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo-white.png" alt="Cool Admin" />
-                </a>
-            </div>
             <div class="menu-sidebar2__content js-scrollbar1">
                 <div class="account2">
-                    <div class="image img-cir img-120">
-                        <img src="images/icon/avatar-big-01.jpg" alt="John Doe" />
-                    </div>
-                    <h4 class="name">john doe</h4>
-                    <a href="#">Sign out</a>
+                    <ul class="nav navbar-nav menu_nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@User.Identity.Name!</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+
                 </div>
                 <nav class="navbar-sidebar2">
                     <ul class="list-unstyled navbar__list">
@@ -78,18 +79,13 @@
                                         <i class="fas fa-tachometer-alt"></i>Antrenorler
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="/Admin/Facility">
-                                        <i class="fas fa-tachometer-alt"></i>Olanaklar
-                                    </a>
-                                </li>
                             </ul>
                         </li>
                         <li>
                             <a href="/Admin/News">
                                 <i class="fas fa-chart-bar"></i>Haberler
                             </a>
-                            <span class="inbox-num">3</span>
+                            
                         </li>
                         <li>
                             <a href="/Admin/Event">
@@ -127,8 +123,16 @@
             <aside class="menu-sidebar2 js-right-sidebar d-block d-lg-none">
                 <div class="menu-sidebar2__content js-scrollbar2">
                     <div class="account2">
-                        <h4 class="name">john doe</h4>
-                        <a href="#">Sign out</a>
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@User.Identity.Name!</a>
+                            </li>
+                            <li class="nav-item">
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
                     </div>
                     <nav class="navbar-sidebar2">
                         <ul class="list-unstyled navbar__list">
@@ -150,18 +154,12 @@
                                             <i class="fas fa-tachometer-alt"></i>Antrenorler
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="/Admin/Facility">
-                                            <i class="fas fa-tachometer-alt"></i>Olanaklar
-                                        </a>
-                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="/Admin/News">
                                     <i class="fas fa-chart-bar"></i>Haberler
                                 </a>
-                                <span class="inbox-num">3</span>
                             </li>
                             <li>
                                 <a href="/Admin/Event">

@@ -21,7 +21,7 @@ namespace Sportif.Pages.Admin.Trainer
 
         public IActionResult OnGet()
         {
-        ViewData["SalonID"] = new SelectList(_context.Salons, "ID", "ID");
+            ViewData["SalonID"] = new SelectList(_context.Salons, "ID", "Header");
             return Page();
         }
 

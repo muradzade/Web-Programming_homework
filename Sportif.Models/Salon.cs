@@ -13,7 +13,6 @@ namespace Sportif.Models
         public string Image { get; set; }
         public bool IsSlider { get; set; }
         public virtual ICollection<ApplicationUser> ApplicationUsers { get; set; }
-        public virtual ICollection<Facility> Facilities { get; set; }
         public virtual ICollection<SalonComment> SalonComments { get; set; }
        
     }

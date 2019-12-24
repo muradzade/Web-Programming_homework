@@ -43,11 +43,11 @@
                             <li class="nav-item active"><a class="nav-link" asp-page="/Index">Anasayfa</a></li>
                             @if (User.IsInRole("Admin"))
                             {
-                                <li class="nav-item"><a class="nav-link" asp-page="/Admin/Home/Index">Yonet</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="/Admin/Salon/Index">Yonet</a></li>
                             }
                             else
                             {
-                                <li class="nav-item"><a class="nav-link" asp-page="/User/Salon/Index">Üyelik</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="/Salons">Üyelik</a></li>
                                 <li class="nav-item"><a class="nav-link" asp-page="">Hakkımızda</a></li>
                                 <li class="nav-item"><a class="nav-link" asp-page="">İletişim</a></li>
                             }

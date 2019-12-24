@@ -1,10 +1,9 @@
 ﻿@page
-@model Sportif.Pages.User.Salon.IndexModel
+@model Sportif.SalonsModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Salons";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
-
 
 <div class="page-container">
     <div class="container">
@@ -40,7 +39,7 @@
                                             <img class="card-img rounded-0" src="img/@item.Image" alt="">
                                         </div>
                                         <div class="card-subject__body">
-                                            <h3><a asp-page="/User/Salon/Details" asp-route-id="@item.ID">@item.Header</a></h3>
+                                            <h3><a asp-page="/SalonDetails" asp-route-id="@item.ID">@item.Header</a></h3>
                                             <p>@item.Description</p>
                                         </div>
                                     </div>
